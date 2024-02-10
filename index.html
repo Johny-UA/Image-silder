@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <title>Document</title>
+        <style>
+        ul,li{
+            list-style-type: none;
+        }
+        body {
+            height: 100vh;
+            position: relative;
+            display: grid;
+            place-items: center;
+            margin: 0;
+            place-items: center;
+            background: wheat;
+        }
+        
+        .slider-container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #0000004d;
+        }
+        
+        .image-container {
+            width: 500px;
+            display: flex;
+            transition: all 0.4s ease-in-out;
+        }
+        
+        img {
+            width: 500px;
+            height: 300px;
+        }
+        
+        .btn {
+            position: absolute;
+            top: 50%;
+            color: white;
+            font-size: 1.6rem;
+            transform: translateY(-50%);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            opacity: 1;
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+
+        #point-container{
+            width: auto;
+            height: auto;
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            padding: 0;
+            left: 30%;
+        }
+        #point{
+            text-decoration: none;
+            width: 20px;
+            margin: 0 10px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0.6;
+        }
+        #point:hover{
+            opacity: 1;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="slider-container">
+            <div class="image-container">
+                <img
+                    src="./images/завантаження.jpg"
+                    alt="" />
+                <img
+                    src="./images/images.jpg"
+                    alt="" />
+                <img
+                    src="./images/digital-painting-mountain-landscape-with-river-mountains-background_929194-1319.avif"
+                    alt="" />
+                <img
+                    src="./images/painting-mountain-landscape-with-cows-foreground_900321-5258.avif"
+                    alt="" />
+                <img
+                    src="./images/depositphotos_598268442-stock-photo-mountain-landscape-water-vegetation-open.jpg"
+                    alt="" />
+            </div>
+            <i class="fa-solid fa-angles-left btn prev"></i>
+            <i class="fa-solid fa-angles-right btn next"></i>
+            <ul id="point-container">
+                <li id="point"></li>
+                <li id="point"></li>
+                <li id="point"></li>
+                <li id="point"></li>
+                <li id="point"></li>
+            </ul>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
