@@ -5,18 +5,14 @@ let next = document.querySelector(".next");
 let imageContainer = document.querySelector(".image-container");
 let image = document.querySelectorAll("img");
 let currentImg = 1;
-let point = document.querySelectorAll("#point")
 
-for (i = 0; i < point.length; i ++){
-y = i
-}
 
-point.forEach((item)=>{
-    item.onclick = (event)=>{
-        imageContainer.style.transform = `translateX(-${y * IMAGE_WIDTH
-        }px)`;
+Remove_point = (index)=>{
+    imageContainer.style.transform = `translateX(0px)`
+        imageContainer.style.transform = `translateX(-${IMAGE_WIDTH * index}px)`;
     }
-})
+
+
 let updateImg = () => {
     if (currentImg > image.length) {
         currentImg = 1;
